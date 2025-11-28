@@ -1,3 +1,5 @@
+package com.daniel.radar.analyzer;
+
 public class Alert {
     public String service;
     public String metric;

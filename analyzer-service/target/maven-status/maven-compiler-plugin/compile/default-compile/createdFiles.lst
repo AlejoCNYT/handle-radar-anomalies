@@ -1,0 +1,5 @@
+com\daniel\radar\analyzer\AlertController.class
+com\daniel\radar\analyzer\AnalyzerApplication.class
+com\daniel\radar\analyzer\ZScoreDetector.class
+com\daniel\radar\analyzer\PrometheusService.class
+com\daniel\radar\analyzer\Alert.class

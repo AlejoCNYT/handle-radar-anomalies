@@ -9,11 +9,14 @@ import java.util.List;
 @RestController
 public class AlertController {
 
-    @Autowired
-    private PrometheusService prom;
+    private final PrometheusService prom;
+    private final ZScoreDetector detector;
 
     @Autowired
-    private ZScoreDetector detector;
+    public AlertController(PrometheusService prom, ZScoreDetector detector) {
+        this.prom = prom;
+        this.detector = detector;
+    }
 
     @GetMapping("/alerts")
     public List<Alert> alerts() {
