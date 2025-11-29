@@ -19,6 +19,7 @@ services:
       - PROMETHEUS_URL=http://prometheus:9090
     depends_on:
       - prometheus
+      - alertmanager   # <-- nos aseguramos de que Alertmanager esté arriba
 
   prometheus:
     container_name: radar-prometheus
@@ -29,6 +30,15 @@ services:
     ports:
       - "9090:9090"
 
+  alertmanager:
+    container_name: radar-alertmanager
+    image: prom/alertmanager
+    volumes:
+      - ./prometheus/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    command: --config.file=/etc/alertmanager/alertmanager.yml --log.level=info
+    ports:
+      - "9093:9093"
+
   dashboard:
     container_name: radar-dashboard
     image: nginx:latest
@@ -38,3 +48,4 @@ services:
       - "8080:80"
     depends_on:
       - analyzer
+  

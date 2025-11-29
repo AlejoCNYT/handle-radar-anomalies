@@ -2,9 +2,16 @@ global:
   # Cada cuánto se hace scrape a los targets
   scrape_interval: 15s
 
+# 🔔 Enviar alertas a Alertmanager
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - "alertmanager:9093"
+
 # 🔔 Archivos de reglas de alerta
 rule_files:
-  - "/etc/prometheus/alerts.yml"   #  <-- Debe coincidir con ruta docker
+  - "/etc/prometheus/alerts.yml"   #  <-- Debe coincidir con ruta en Docker
 
 scrape_configs:
   # (Opcional pero recomendado) Prometheus se scrapea a sí mismo
