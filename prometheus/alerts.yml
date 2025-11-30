@@ -1,17 +1,17 @@
 groups:
   - name: latency-alerts
     rules:
-      # Regla de alerta: p95 de latencia muy alto
       - alert: HighLatencyP95
         expr: histogram_quantile(
                 0.95,
-                rate(http_latency_ms_milliseconds_bucket[5m])
+                rate(http_latency_ms_bucket{service="payment-api"}[5m])
               ) > 2000
         for: 1m
         labels:
           severity: warning
+          service: payment-api
         annotations:
-          summary: "High p95 latency detected"
-          description: >
-            The 95th percentile latency is above 2000 ms
-            for more than 1 minute. Current value: {{ $value }} ms.
+          summary: "High p95 latency detected in payment-api"
+          description: |
+            95th percentile latency exceeds 2000ms for more than 1 minute.
+            Current value = {{ $value }} ms.

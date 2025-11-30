@@ -1,25 +1,23 @@
 global:
-  # Cada cuánto se hace scrape a los targets
-  scrape_interval: 15s
+  scrape_interval: 15s  # frecuencia de scrapes
 
-# 🔔 Enviar alertas a Alertmanager
 alerting:
   alertmanagers:
     - static_configs:
-        - targets:
-            - "alertmanager:9093"
+        - targets: ["alertmanager:9093"]
 
-# 🔔 Archivos de reglas de alerta
+# Reglas de alerta que serán cargadas
 rule_files:
-  - "/etc/prometheus/alerts.yml"   #  <-- Debe coincidir con ruta en Docker
+  - "/etc/prometheus/alerts.yml"
 
 scrape_configs:
-  # (Opcional pero recomendado) Prometheus se scrapea a sí mismo
+
+  # Prometheus se monitorea a sí mismo
   - job_name: "prometheus"
     static_configs:
       - targets: ["localhost:9090"]
 
-  # Nuestro ingestor de métricas Spring Boot
+  # Servicio ingestor (Spring Boot con Micrometer)
   - job_name: "ingestor"
     metrics_path: "/actuator/prometheus"
     static_configs:
