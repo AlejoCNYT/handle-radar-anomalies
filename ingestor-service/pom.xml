@@ -9,13 +9,11 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.5</version>
-        <relativePath/>
     </parent>
 
     <groupId>com.daniel.radar</groupId>
-    <artifactId>ingestor-service</artifactId>
+    <artifactId>analyzer-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ingestor-service</name>
 
     <properties>
         <java.version>17</java.version>
@@ -23,25 +21,30 @@
 
     <dependencies>
 
-        <!-- API REST -->
+        <!-- REST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Actuator para exponer métricas -->
+        <!-- WebSockets + STOMP (LO QUE FALTABA) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <!-- Actuator & Micrometer -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Exportador Prometheus -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
-        <!-- Tests -->
+        <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>📡 Alertas en tiempo real</title>
+    <style>
+        body { background:#0d1117; color:#fff; font-family:monospace; }
+        #console { white-space:pre-wrap; padding:20px; border-left:4px solid #00ff95; }
+    </style>
+</head>
+<body>
+
+<h2>📡 Radar – Alertas Recibidas</h2>
+<pre id="console">Conectando a WebSocket...</pre>
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+
+<script>
+    const socket = new SockJS("http://localhost:8082/ws-alerts");
+    const client = Stomp.over(socket);
+    const log = msg => document.getElementById("console").textContent += "\n" + msg;
+
+    client.connect({}, () => {
+        log("🟢 Conectado al WebSocket");
+
+        client.subscribe("/topic/alerts", msg => {
+            log("⚠ ALERTA: " + msg.body);
+        });
+    }, err => log("🔴 Error WebSocket => "+err));
+</script>
+</body>
+</html>
