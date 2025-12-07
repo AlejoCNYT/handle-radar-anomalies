@@ -14,7 +14,7 @@ const latencyChart = new Chart(ctx, {
         labels: [],
         datasets: [{
             label: "Avg Latency",
-            borderColor: "rgb(0,200,100)",
+            borderColor: "rgb(1,200,100)",
             backgroundColor: "rgba(0,200,100,0.1)",
             data: []
         }]
