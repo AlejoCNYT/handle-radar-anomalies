@@ -92,10 +92,33 @@ groups:
 
 ## 🖥 Dashboard Incluye
 
-| Métrica | Estado |
+| Métrica / Funcionalidad | Estado |
 |---|---|
-| P95 Latency realtime | 🟢 |
-| Errores por minuto | 🟢 |
-| Alertas activas | 🔥 Si regla se cumple |
+| Latencia p95/p99 en tiempo real | 🟢 |
+| Errores por minuto (HTTP 5xx) | 🟢 |
+| Throughput (req/s) por servicio | 🟢 |
+| Alertas activas (Z-score / IQR) | 🟢 |
+| Visualización de alertas con severidad | 🟢 |
+| Indicador de SLO (error budget) | 🟢 |
+| Paneles en Grafana (opcional) | 🟢 Integrado |
+| Exportación OpenTelemetry → Prometheus | 🟢 |
 | WebSocket Live Feed | 🟡 Ajustable |
+| Drill-down por servicio / endpoint | 🟡 Prototipo |
+| Retención de métricas históricas | 🟡 7–30 días (configurable) |
+
+### ✨ Notas adicionales
+
+- El dashboard web básico usa **HTML/JS/Chart.js**  
+- Grafana está habilitado como opción avanzada para visualización y análisis en tiempo real  
+- Las métricas clave se basan en las consultas PromQL incluidas en el proyecto  
+- Se agregaron indicadores de calidad del servicio (SLO) inspirados en Google SRE  
+- Las alertas se generan a partir de detectores estadísticos configurables (Z-score, IQR)
+
+### 🚀 Qué permite esta versión del proyecto
+
+- Monitorear latencia y errores en tiempo real  
+- Detectar anomalías basado en estadística interpretables  
+- Visualizar alertas en un dashboard web o Grafana  
+- Evaluar cumplimiento de objetivos de confiabilidad (SLO)  
+- Extender rápidamente hacia métricas adicionales o ML  
 
