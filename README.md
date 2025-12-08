@@ -1,8 +1,3 @@
-<img width="670" height="574" alt="Captura de pantalla 2025-12-04 195910" src="https://github.com/user-attachments/assets/6a15a77d-23db-43c7-b0f4-235f9851cf47" />
-<img width="674" height="603" alt="Captura de pantalla 2025-12-04 195031" src="https://github.com/user-attachments/assets/5cac0ef8-4fa1-4d60-8cee-45aeb07c6412" />
-<img width="686" height="742" alt="Captura de pantalla 2025-12-04 200129" src="https://github.com/user-attachments/assets/3c2c7c5f-7a66-42a3-9796-7d223ee3abc2" />
-<img width="648" height="1012" alt="Captura de pantalla 2025-12-04 200203" src="https://github.com/user-attachments/assets/abef8e63-3c62-4622-838c-5846d7de5743" />
-
 
 # 📡 Radar de Latencia & Alertas — Sistema de Monitoreo Distribuido
 
@@ -127,6 +122,7 @@ groups:
 - Visualizar alertas en un dashboard web o Grafana  
 - Evaluar cumplimiento de objetivos de confiabilidad (SLO)  
 - Extender rápidamente hacia métricas adicionales o ML  
+
 
 
 
