@@ -1,4 +1,4 @@
-[![Demo del Proyecto](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)]([https://www.youtube.com/watch?v=dQw4w9WgXcQ](https://youtu.be/bggTBPMWeE8))
+[![Demo del Proyecto](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://youtu.be/bggTBPMWeE8)
 
 # 📡 Radar de Latencia & Alertas — Sistema de Monitoreo Distribuido
 
@@ -123,5 +123,6 @@ groups:
 - Visualizar alertas en un dashboard web o Grafana  
 - Evaluar cumplimiento de objetivos de confiabilidad (SLO)  
 - Extender rápidamente hacia métricas adicionales o ML  
+
 
 
