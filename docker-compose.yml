@@ -27,6 +27,19 @@ services:
     depends_on:
       - prometheus
 
+  grafana:
+    container_name: radar-grafana
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    depends_on:
+      - prometheus
+
   ingestor:
     container_name: radar-ingestor
     build: ./ingestor-service
@@ -60,3 +73,6 @@ services:
       - "8080:80"
     depends_on:
       - analyzer
+
+volumes:
+  grafana-storage:

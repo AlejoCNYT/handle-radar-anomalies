@@ -1,7 +1,7 @@
 // ==============================
 // CONFIG
 // ==============================
-const API_ALERTS = "http://localhost:8080/alerts";
+const API_ALERTS = `http://${window.location.hostname}:8080/alerts`;
 
 // ==============================
 // CHART INIT
