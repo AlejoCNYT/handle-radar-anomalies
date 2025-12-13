@@ -1,4 +1,4 @@
-<img width="822" height="937" alt="Captura de pantalla 2025-12-08 135745" src="https://github.com/user-attachments/assets/5516dc55-9595-42ed-8783-bbc07ed52c5d" />
+[![Demo del Proyecto](https://img.youtube.com/vi/bggTBPMWeE8/hqdefault.jpg)](https://youtu.be/bggTBPMWeE8)
 
 # 📡 Radar de Latencia & Alertas — Sistema de Monitoreo Distribuido
 
@@ -104,9 +104,9 @@ groups:
 | Indicador de SLO (error budget) | 🟢 |
 | Paneles en Grafana (opcional) | 🟢 Integrado |
 | Exportación OpenTelemetry → Prometheus | 🟢 |
-| WebSocket Live Feed | 🟡 Ajustable |
-| Drill-down por servicio / endpoint | 🟡 Prototipo |
-| Retención de métricas históricas | 🟡 7–30 días (configurable) |
+| WebSocket Live Feed | 🟢 Ajustable |
+| Drill-down por servicio / endpoint | 🟢 Prototipo |
+| Retención de métricas históricas | 🟢 |
 
 ### ✨ Notas adicionales
 
@@ -123,9 +123,4 @@ groups:
 - Visualizar alertas en un dashboard web o Grafana  
 - Evaluar cumplimiento de objetivos de confiabilidad (SLO)  
 - Extender rápidamente hacia métricas adicionales o ML  
-
-
-
-
-
 
