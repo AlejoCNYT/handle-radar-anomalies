@@ -123,6 +123,3 @@ groups:
 - Visualizar alertas en un dashboard web o Grafana  
 - Evaluar cumplimiento de objetivos de confiabilidad (SLO)  
 - Extender rápidamente hacia métricas adicionales o ML  
-
-
-
